@@ -54,6 +54,7 @@ public class EtsyController {
         // Find Etsy by it's then use map to update it
         Etsys.findById(id).map(Etsy -> {
 
+        Etsy.setCategory(fixEtsy.getCategory());
         Etsy.setTitle(fixEtsy.getTitle());
         Etsy.setImage(fixEtsy.getImage());
         Etsy.setPrice(fixEtsy.getPrice());

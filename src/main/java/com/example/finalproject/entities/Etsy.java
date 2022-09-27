@@ -16,6 +16,8 @@ public class Etsy {
     @GeneratedValue(strategy = GenerationType.AUTO) //auto generates
     public Integer id;
 
+    public String category;
+
     public String title;
 
     public String image;
@@ -32,7 +34,8 @@ public class Etsy {
 
     }
 
-    public Etsy(String title, String image, String price, String description){
+    public Etsy(String title, String category, String image, String price, String description){
+        this.category = category;
         this.title = title;
         this.image = image;
         this.image = price;
@@ -50,6 +53,14 @@ public class Etsy {
 
     public void setId(Integer id){
         this.id = id;
+    }
+
+    public String getCategory(){
+        return this.category;
+    }
+
+    public void setCategory(String category){
+        this.category = category;
     }
 
     public String getTitle(){
