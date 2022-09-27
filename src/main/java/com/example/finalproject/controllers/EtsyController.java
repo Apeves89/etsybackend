@@ -63,8 +63,8 @@ public class EtsyController {
         return Etsy;
 
         });
-
-        // return all Etsys
+   
+        // return all Etsyse
         return Etsys.findAll();
     }
 
